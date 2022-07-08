@@ -1,9 +1,11 @@
-package tddselftest
+package testframe
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestWasRun(t *testing.T) {
-	var test WasRun
+	var test *WasRun = NewWasRun((*WasRun).testMethod)
 	if test.wasRun == true {
 		t.Error("wasRun should be false")
 	}
